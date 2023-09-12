@@ -1,0 +1,336 @@
+:root{
+    --progress-bar-width-hp: 50;
+    --progress-bar-color-hp: #000001;
+
+    --progress-bar-width-atk: 50;
+    --progress-bar-color-atk: #000001;
+
+    --progress-bar-width-def: 50;
+    --progress-bar-color-def: #000001;
+
+    --progress-bar-width-spatk: 50;
+    --progress-bar-color-spatk: #000001;
+
+    --progress-bar-width-spdef: 50;
+    --progress-bar-color-spdef: #000001;
+
+    --progress-bar-width-speed: 50;
+    --progress-bar-color-speed: #000001;
+
+    --progress-bar-width-total: 50;
+    --progress-bar-color-total: #000001;
+}
+
+.normal {
+    background-color: #a6a877;
+}
+
+.grass {
+    background-color: #77c850;
+}
+
+.fire {
+    background-color: #ee7f30;
+}
+
+.water {
+    background-color: #678fee;
+}
+
+.electric {
+    background-color: #f7cf2e;
+}
+
+.ice {
+    background-color: #98d5d7;
+}
+
+.ground {
+    background-color: #dfbf69;
+}
+
+.flying {
+    background-color: #a98ff0;
+}
+
+.poison {
+    background-color: #a040a0;
+}
+
+.fighting {
+    background-color: #bf3029;
+}
+
+.psychic {
+    background-color: #f65687;
+}
+
+.dark {
+    background-color: #725847;
+}
+
+.rock {
+    background-color: #b8a137;
+}
+
+.bug {
+    background-color: #a8b720;
+}
+
+.ghost {
+    background-color: #6e5896;
+}
+
+.steel {
+    background-color: #b9b7cf;
+}
+
+.dragon {
+    background-color: #6f38f6;
+}
+
+.fairy {
+    background-color: #f9aec7;
+}
+
+.pokemon {
+    display: flex;
+    flex-direction: column;
+    margin: .5rem;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.pokemon .numberName{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pokemon .name {
+    text-transform: capitalize;
+    font-size: xx-large;
+    color: #fff;
+    margin-bottom: .25rem;
+}
+
+.pokemon .number {
+    color: #fff;
+    text-align: right;
+    font-size: medium;
+}
+
+.pokemon .detail {
+
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.pokemon .detail .types {
+    display: flex;
+    flex-direction: row;
+    padding: 0.25rem;
+    margin: 0 0 2rem 0;
+    list-style: none;
+}
+
+.pokemon .detail .types .type {
+    color: #fff;
+    padding: .25rem .5rem;
+    margin: .25rem;
+    font-size: 0.8rem;
+    border-radius: 1rem;
+    filter: brightness(1.1);
+    text-align: center;
+}
+
+.pokemon .detail img {
+    max-width: 100%;
+    height: 152px;
+}
+
+
+.btnVoltar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 1rem;
+}
+
+#btnVoltar {
+    padding: .25rem .5rem;
+    margin: .25rem 0;
+    font-size: .625rem;
+    color: #fff;
+    background-color: #787878;
+    border: none;
+    border-radius: 1rem;
+}
+
+.detailSection {
+    display: flex;
+    flex-direction: column;
+    margin: .5rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: lightgray;
+    color: black;
+}
+
+ol {
+    list-style: none;
+}
+
+.detailSection .details {
+    display: flex;
+    flex-direction: column;
+    margin: .25rem;
+    padding: .25rem;
+}
+
+.detailSection .details .detail {
+    padding: 0.25rem 0;
+    margin: 0.125rem 0;
+}
+
+.detailSection .details .abilities {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    padding: .125rem 0;
+    margin: .125rem 0;
+}
+
+.detailSection .details .abilities .ability {
+    text-transform: capitalize;
+    padding: 0 0.25rem;
+    margin: 0 0.25rem;
+}
+
+.detailSection .detailStats {
+    display: flex;
+    flex-direction: column;
+    margin: .25rem;
+    padding: .25rem;
+}
+
+.detailSection .detailStats .statsList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+}
+
+
+.detailSection .detailStats .statsList .stats{
+    align-items: center;
+    padding: 0.25rem 0;
+}
+
+.detailSection .detailStats .statsList .stats .atribute{
+    padding: 0;
+    margin: 0;
+}
+
+.detailSection .detailStats .statsList .stats .atributeValue{
+    padding: 0;
+    margin: 0;
+}
+
+.detailSection .detailStats .statsList .stats .progress-bar{
+    height: 0.625rem;
+    padding-right: 0.25rem;
+    margin: 0;
+    border: none;
+    border-radius: 1rem;
+    background-color: #c6c5c5;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+#hpProgressBar::before{
+    content: "";
+    height: 0.625rem;
+    padding-right: .25rem;
+    margin: 0;
+    border: none;
+    border-radius: 1rem;
+    background-color: var(--progress-bar-color-hp);
+    width: calc( var(--progress-bar-width-hp) * 1%);
+}
+#attackProgressBar::before{
+    content: "";
+    height: 0.625rem;
+    padding-right: .25rem;
+    margin: 0;
+    border: none;
+    border-radius: 1rem;
+    background-color: var(--progress-bar-color-atk);
+    width: calc( var(--progress-bar-width-atk) * 1%);
+}
+#defenseProgressBar::before {
+    content: "";
+    height: 0.625rem;
+    padding-right: .25rem;
+    margin: 0;
+    border: none;
+    border-radius: 1rem;
+    background-color: var(--progress-bar-color-def);
+    width: calc( var(--progress-bar-width-def) * 1%);
+}
+#spatkProgressBar::before {
+    content: "";
+    height: 0.625rem;
+    padding-right: .25rem;
+    margin: 0;
+    border: none;
+    border-radius: 1rem;
+    background-color: var(--progress-bar-color-spatk);
+    width: calc( var(--progress-bar-width-spatk) * 1%);
+}
+#spdefProgressBar::before {
+    content: "";
+    height: 0.625rem;
+    padding-right: .25rem;
+    margin: 0;
+    border: none;
+    border-radius: 1rem;
+    background-color: var(--progress-bar-color-spdef);
+    width: calc( var(--progress-bar-width-spdef) * 1%);
+}
+#speedProgressBar::before {
+    content: "";
+    height: 0.625rem;
+    padding-right: .25rem;
+    margin: 0;
+    border: none;
+    border-radius: 1rem;
+    background-color: var(--progress-bar-color-speed);
+    width: calc( var(--progress-bar-width-speed) * 1%);
+}
+
+#totalProgressBar::before {
+    content: "";
+    height: 0.625rem;
+    padding-right: .25rem;
+    margin: 0;
+    border: none;
+    border-radius: 1rem;
+    background-color: var(--progress-bar-color-total);
+    width: calc( var(--progress-bar-width-total) * 1%);
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 20% 20% auto;
+    column-gap: 0.5rem;
+}
+
+.grid-item{
+    text-align: center;
+}

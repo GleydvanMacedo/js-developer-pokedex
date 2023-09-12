@@ -6,11 +6,21 @@ function convertPokeApiDetailToPokemon(pokeDetail) {
     pokemon.number = pokeDetail.id
     pokemon.name = pokeDetail.name
 
+    // Altura em decimetro, ex: 7dm = 0.7m
+    pokemon.height = pokeDetail.height
+    // Peso em hectograma ex: 69 hg = 6.9kg
+    pokemon.weight = pokeDetail.weight
+
+    const abilities = pokeDetail.abilities.map( (abilitySlot) => abilitySlot.ability.name )
+    pokemon.abilities = abilities;
+
     const types = pokeDetail.types.map((typeSlot) => typeSlot.type.name)
     const [type] = types
-
     pokemon.types = types
     pokemon.type = type
+
+    const stats = pokeDetail.stats.map( (statsSlot) => statsSlot.base_stat )
+    pokemon.stats = stats
 
     pokemon.photo = pokeDetail.sprites.other.dream_world.front_default
 
